@@ -3,6 +3,7 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateHTML = require("./src/generateHTML");
 let employees = [];
 
 
@@ -113,8 +114,6 @@ createIntern = () => {
 };
 
 
-
-
 menu = () => {
     inquirer.prompt([
         {
@@ -136,4 +135,18 @@ menu = () => {
 
 };
 
+function writeToFile(fileName, data) {
+    fs. writeFile(fileName, data, (err) =>
+    err ? console.log(err) : console.log('Success!')
+);}
+
+
+function generateTeam() {
+    inquirer.prompt(employees).then((data) => {
+        writeToFile('teamProfile.html', generateHTML(data))
+    })
+}
+
+
 createManager();
+
