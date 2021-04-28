@@ -137,15 +137,13 @@ menu = () => {
 
 function writeToFile(fileName, data) {
     fs. writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log('Success!')
+    err ? console.log(err) : console.log('Success! Generating your HTML file...')
 );}
 
 
 function generateTeam() {
-    inquirer.prompt(employees).then((data) => {
-        writeToFile('teamProfile.html', generateHTML(data))
-    })
-}
+        writeToFile('./dist/teamProfile.html', generateHTML(employees))
+};
 
 
 createManager();
