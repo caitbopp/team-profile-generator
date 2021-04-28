@@ -1,8 +1,5 @@
-const Intern = require("../lib/Intern");
-
-// should there be separate render[role] functions?
 function managerCard(data) {
-    return`<div class="card" style="width: 18rem;">
+    return `<div class="card" style="width: 18rem;">
     <div class="card-header">
         <h3>${data.name}</h3>
         <p>
@@ -40,7 +37,7 @@ function engineerCard(data) {
 </div>`
 };
 
-function internCard (data) {
+function internCard(data) {
     return `<div class="card" style="width: 18rem;">
     <div class="card-header">
     <h3>${data.name}</h3>
@@ -64,7 +61,7 @@ function generateHTML(employees) {
     let card = "";
     employees.forEach(person => {
         if (person.getRole() === "Manager") {
-           card += managerCard(person);
+            card += managerCard(person);
         } else if (person.getRole() === "Engineer") {
             card += engineerCard(person);
         } else if (person.getRole() === "Intern") {
@@ -101,10 +98,8 @@ function generateHTML(employees) {
     
     </html>
     `
-    
-    };
 
-
+};
 
 
 module.exports = generateHTML;

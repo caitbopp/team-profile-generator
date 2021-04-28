@@ -13,27 +13,23 @@ createManager = () => {
             type: "input",
             name: "name",
             message: "What is the team manager's name?",
-            // Validation here
         },
         {
             type: "input",
             name: "id",
             message: "What is the team manager's employee id?",
-            // Validation here
         },
         {
             type: "input",
             name: "email",
             message: "What is the team manager's email address?",
-            // Validation here
         },
         {
             type: "input",
             name: "officeNumber",
             message: "What is the team manager's office number?",
-            // Validation here
         }
-    ]).then(({name, id, email, officeNumber}) => {
+    ]).then(({ name, id, email, officeNumber }) => {
         const manager = new Manager(name, id, email, officeNumber);
         employees.push(manager);
         console.log(manager);
@@ -49,27 +45,23 @@ createEngineer = () => {
             type: "input",
             name: "name",
             message: "What is the engineer's name?",
-            // Validation here
         },
         {
             type: "input",
             name: "id",
             message: "What is the engineer's employee id?",
-            // Validation here
         },
         {
             type: "input",
             name: "email",
             message: "What is the engineer's email address?",
-            // Validation here
         },
         {
             type: "input",
             name: "gitHub",
             message: "What is the engineer's GitHub username?",
-            // Validation here
         }
-    ]).then(({name, id, email, gitHub}) => {
+    ]).then(({ name, id, email, gitHub }) => {
         const engineer = new Engineer(name, id, email, gitHub);
         employees.push(engineer);
         console.log(engineer);
@@ -85,27 +77,23 @@ createIntern = () => {
             type: "input",
             name: "name",
             message: "What is the intern's name?",
-            // Validation here
         },
         {
             type: "input",
             name: "id",
             message: "What is the intern's employee id?",
-            // Validation here
         },
         {
             type: "input",
             name: "email",
             message: "What is the intern's email address?",
-            // Validation here
         },
         {
             type: "input",
             name: "school",
             message: "What is the intern's school?",
-            // Validation here
         }
-    ]).then(({name, id, email, school}) => {
+    ]).then(({ name, id, email, school }) => {
         const intern = new Intern(name, id, email, school);
         employees.push(intern);
         console.log(intern);
@@ -122,13 +110,12 @@ menu = () => {
             message: "Do you want to add another member to your team?",
             choices: ["Add an Engineer", "Add an Intern", "No, my team in complete."]
         }
-    ]).then(({options}) => {
+    ]).then(({ options }) => {
         if (options === "Add an Engineer") {
             createEngineer();
-        }else if (options === "Add an Intern") {
+        } else if (options === "Add an Intern") {
             createIntern();
-        }else {generateTeam()}
-        // Create generateTeam function - call in fs process - look into readme generator writeToFile function
+        } else { generateTeam() }
     });
 
 
@@ -136,13 +123,13 @@ menu = () => {
 };
 
 function writeToFile(fileName, data) {
-    fs. writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log('Success! Generating your HTML file...')
-);}
-
+    fs.writeFile(fileName, data, (err) =>
+        err ? console.log(err) : console.log('Success! Generating your HTML file...')
+    );
+}
 
 function generateTeam() {
-        writeToFile('./dist/teamProfile.html', generateHTML(employees))
+    writeToFile('./dist/teamProfile.html', generateHTML(employees))
 };
 
 
