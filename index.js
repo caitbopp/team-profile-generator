@@ -108,7 +108,7 @@ menu = () => {
             type: "list",
             name: "options",
             message: "Do you want to add another member to your team?",
-            choices: ["Add an Engineer", "Add an Intern", "No, my team in complete."]
+            choices: ["Add an Engineer", "Add an Intern", "No, my team is complete."]
         }
     ]).then(({ options }) => {
         if (options === "Add an Engineer") {
