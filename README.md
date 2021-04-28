@@ -16,7 +16,7 @@ npm i
 ```
 For video on how to create a README file, please visit: [https://youtu.be/6nsGVJAthLM](https://youtu.be/6nsGVJAthLM).
 ## Usage
-FS and Inquirer are required to use the Team Profile Generator. To run the Team Profile Generator, users will need to open the integrated terminal, and answer a series of questions. After answering the questions, a Team Profile HTML page will be created.
+FS, Inquirer, and Jest are required to use the Team Profile Generator. To run the Team Profile Generator, users will need to open the integrated terminal, and answer a series of questions. After answering the questions, a Team Profile HTML page will be created.
 ## License
 This project is licensed under the: none.
 
