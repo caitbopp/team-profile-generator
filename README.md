@@ -14,9 +14,13 @@ To install necessary dependencies, run the following command:
 ```
 npm i
 ```
-For video on how to create a README file, please visit: [https://youtu.be/6nsGVJAthLM](https://youtu.be/6nsGVJAthLM).
+For video on how to create a Team Profile Generator file, please visit: [https://youtu.be/ZxebSb95PSU](https://youtu.be/ZxebSb95PSU).
+
 ## Usage
-FS, Inquirer, and Jest are required to use the Team Profile Generator. To run the Team Profile Generator, users will need to open the integrated terminal, and answer a series of questions. After answering the questions, a Team Profile HTML page will be created.
+FS, Inquirer, and Jest are required to use the Team Profile Generator. To run the Team Profile Generator, users will need to open the integrated terminal, and answer a series of questions. After answering the questions, a Team Profile HTML page like the image below will be created.
+
+<img src="./assets/preview.png">
+
 ## License
 This project is licensed under the: none.
 
